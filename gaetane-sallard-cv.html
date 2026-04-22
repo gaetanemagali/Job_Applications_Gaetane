@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gaétane Sallard — Marine Microbiologist / Environmental Scientist</title>
+<meta name="description" content="CV and portfolio of Gaétane Sallard — Marine Microbiologist and Environmental Scientist. Education, research, skills, projects, and personal work." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+  /* ---------- Tokens ---------- */
+  :root {
+    --cream: #F5F0E8;
+    --cream-2: #EFE8DC;
+    --navy: #1C2B4A;
+    --navy-70: rgba(28, 43, 74, 0.70);
+    --navy-40: rgba(28, 43, 74, 0.40);
+    --navy-15: rgba(28, 43, 74, 0.15);
+    --navy-08: rgba(28, 43, 74, 0.08);
+    --amber: #C8922A;
+    --amber-soft: rgba(200, 146, 42, 0.12);
+
+    --serif: 'DM Serif Display', 'Helvetica Neue', Helvetica, Arial, serif;
+    --sans: 'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    --gutter: clamp(20px, 3vw, 48px);
+    --max: 1280px;
+
+    --step-0: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem);
+    --step-1: clamp(1.05rem, 1rem + 0.3vw, 1.2rem);
+    --step-2: clamp(1.25rem, 1.1rem + 0.6vw, 1.55rem);
+    --step-3: clamp(1.75rem, 1.4rem + 1.2vw, 2.4rem);
+    --step-4: clamp(2.4rem, 2rem + 2vw, 3.8rem);
+    --step-5: clamp(3rem, 2.4rem + 3.5vw, 5.6rem);
+  }
+
+  /* ---------- Base ---------- */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--navy);
+    font-family: var(--sans);
+    font-size: var(--step-0);
+    font-weight: 400;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--navy-40); transition: color .2s ease, border-color .2s ease; }
+  a:hover { color: var(--amber); border-bottom-color: var(--amber); }
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.01em; margin: 0; color: var(--navy); }
+  p { margin: 0 0 0.9em; }
+  ul { margin: 0 0 1em; padding-left: 1.1em; }
+  li { margin-bottom: 0.35em; }
+  hr { border: 0; border-top: 1px solid var(--navy-15); margin: 0; }
+
+  /* ---------- Layout ---------- */
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+  .grid-12 { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); }
+
+  section { padding: clamp(56px, 8vw, 120px) 0; border-top: 1px solid var(--navy-15); }
+  section:first-of-type { border-top: 0; }
+
+  /* ---------- Navigation ---------- */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    background: rgba(245, 240, 232, 0.88);
+    backdrop-filter: saturate(1.2) blur(10px);
+    -webkit-backdrop-filter: saturate(1.2) blur(10px);
+    border-bottom: 1px solid var(--navy-15);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px var(--gutter);
+    max-width: var(--max); margin: 0 auto;
+  }
+  .nav-brand { font-family: var(--serif); font-size: 1.1rem; letter-spacing: -0.01em; border: 0; }
+  .nav-brand:hover { color: var(--amber); }
+  .nav-links { display: flex; gap: 22px; flex-wrap: wrap; }
+  .nav-links a {
+    border: 0; font-size: 0.82rem; text-transform: uppercase;
+    letter-spacing: 0.14em; color: var(--navy-70); font-weight: 500;
+  }
+  .nav-links a:hover { color: var(--amber); }
+  .nav-toggle { display: none; background: transparent; border: 0; cursor: pointer; color: var(--navy); font-size: 1.4rem; }
+  @media (max-width: 820px) {
+    .nav-toggle { display: inline-flex; }
+    .nav-links {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; padding: 12px var(--gutter) 20px;
+      background: var(--cream); border-bottom: 1px solid var(--navy-15);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 8px 0; }
+  }
+
+  /* ---------- Section label ---------- */
+  .section-label {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em;
+    color: var(--amber); font-weight: 500;
+    margin-bottom: 18px;
+  }
+  .section-label::before {
+    content: ""; width: 28px; height: 1px; background: var(--amber);
+  }
+  .section-title {
+    font-size: var(--step-4); line-height: 1.05;
+    margin-bottom: clamp(32px, 5vw, 64px);
+  }
+
+  /* ---------- Hero ---------- */
+  .hero { padding-top: clamp(140px, 16vw, 220px); padding-bottom: clamp(80px, 10vw, 140px); }
+  .hero-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); align-items: end; }
+  .hero-meta { grid-column: span 3; }
+  .hero-main { grid-column: span 9; }
+  .hero-portrait {
+    width: clamp(120px, 14vw, 170px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--cream-2);
+    margin-bottom: 28px;
+    position: relative;
+  }
+  .hero-portrait img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(1) contrast(1.02);
+  }
+  @media (max-width: 900px) {
+    .hero-meta, .hero-main { grid-column: span 12; }
+    .hero-meta { order: 2; margin-top: 32px; }
+    .hero-portrait { width: 140px; margin-bottom: 20px; }
+  }
+  .eyebrow {
+    font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.22em;
+    color: var(--navy-70); margin-bottom: 14px; font-weight: 500;
+  }
+  .hero h1 {
+    font-size: var(--step-5); line-height: 0.98; letter-spacing: -0.02em;
+    margin-bottom: 18px;
+  }
+  .hero .title {
+    font-family: var(--sans); font-size: var(--step-2); font-weight: 400;
+    color: var(--navy-70); max-width: 30ch;
+  }
+  .hero .title em { color: var(--amber); font-style: italic; font-family: var(--serif); }
+  .meta-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
+  .meta-list li { margin-bottom: 6px; }
+  .meta-list .label {
+    display: block; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--navy-40); margin-bottom: 2px;
+  }
+  .meta-list a { border-bottom-color: var(--navy-15); }
+
+  /* ---------- Two-column row ---------- */
+  .row { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); }
+  .col-side { grid-column: span 3; }
+  .col-main { grid-column: span 9; }
+  @media (max-width: 900px) {
+    .col-side, .col-main { grid-column: span 12; }
+  }
+  .side-heading {
+    font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em;
+    color: var(--navy-70); font-weight: 500; margin-bottom: 10px;
+  }
+
+  /* ---------- Entry (Education / Experience) ---------- */
+  .entry {
+    display: grid; grid-template-columns: 140px 1fr; gap: 28px;
+    padding: 26px 0; border-top: 1px solid var(--navy-15);
+  }
+  .entry:first-child { border-top: 0; padding-top: 0; }
+  .entry .period {
+    font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--navy-70); padding-top: 6px;
+  }
+  .entry h3 {
+    font-family: var(--sans); font-weight: 500; font-size: var(--step-1);
+    margin-bottom: 4px; line-height: 1.3;
+  }
+  .entry .org {
+    display: block; font-size: 0.92rem; color: var(--navy-70); margin-bottom: 10px;
+  }
+  .entry .body { font-size: 0.95rem; }
+  .entry .tags {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px;
+  }
+  .tag {
+    font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 4px 10px; border: 1px solid var(--navy-15); color: var(--navy-70);
+    border-radius: 2px; background: transparent;
+  }
+  @media (max-width: 640px) {
+    .entry { grid-template-columns: 1fr; gap: 8px; }
+  }
+
+  /* ---------- Sneak peek card ---------- */
+  .sneak {
+    margin-top: 16px;
+    padding: 22px 24px; background: var(--amber-soft);
+    border-left: 3px solid var(--amber);
+    position: relative;
+  }
+  .sneak .sneak-label {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--amber); font-weight: 500; margin-bottom: 8px;
+  }
+  .sneak blockquote {
+    margin: 0; font-family: var(--serif); font-size: 1.05rem;
+    line-height: 1.45; color: var(--navy);
+  }
+  .sneak .sneak-link {
+    display: inline-block; margin-top: 10px; font-size: 0.82rem;
+    text-transform: uppercase; letter-spacing: 0.15em; color: var(--amber);
+    border-bottom-color: var(--amber);
+  }
+
+  /* ---------- Deliverable preview (poster / figure) ---------- */
+  .poster-preview {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: minmax(0, 320px) 1fr;
+    gap: 22px;
+    align-items: start;
+    padding: 20px;
+    border: 1px solid var(--navy-15);
+    background: var(--cream-2);
+  }
+  .poster-preview .thumb-link {
+    display: block;
+    border: 1px solid var(--navy-15);
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: var(--navy);
+    transition: border-color .3s ease;
+  }
+  .poster-preview .thumb-link:hover { border-color: var(--amber); }
+  .poster-preview .thumb-link img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform .6s ease;
+  }
+  .poster-preview .thumb-link:hover img { transform: scale(1.03); }
+  .poster-caption-label {
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.22em;
+    color: var(--amber); font-weight: 500; margin-bottom: 8px;
+  }
+  .poster-caption h4 {
+    font-family: var(--sans); font-weight: 500; font-size: 1rem;
+    line-height: 1.35; margin: 0 0 10px;
+  }
+  .poster-caption p {
+    font-size: 0.88rem; color: var(--navy-70); margin: 0 0 8px;
+  }
+  @media (max-width: 720px) {
+    .poster-preview { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- Testimonial (member review) ---------- */
+  .testimonial {
+    margin-top: 16px;
+    padding: 22px 24px 20px;
+    border: 1px solid var(--navy-15);
+    background: var(--cream-2);
+    position: relative;
+  }
+  .testimonial::before {
+    content: "\201C";
+    position: absolute;
+    top: -12px; left: 18px;
+    font-family: var(--serif);
+    font-size: 3.2rem;
+    line-height: 1;
+    color: var(--amber);
+    background: var(--cream-2);
+    padding: 0 6px;
+  }
+  .testimonial-label {
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.22em;
+    color: var(--navy-70); font-weight: 500; margin-bottom: 10px;
+  }
+  .testimonial blockquote {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: 1.02rem; line-height: 1.5;
+    color: var(--navy);
+  }
+  .testimonial-meta {
+    font-size: 0.82rem; color: var(--navy-70);
+    margin-top: 14px;
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  }
+  .testimonial-stars {
+    color: var(--amber); letter-spacing: 2px; font-size: 0.9rem;
+  }
+  .testimonial-meta a { font-size: 0.82rem; }
+
+  /* ---------- Programme grid (Les Mills) ---------- */
+  .programmes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 28px;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--navy-15);
+  }
+  .programme-name {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .programme-name a {
+    color: var(--navy);
+    text-decoration: none;
+    border-bottom: 1px solid var(--amber);
+    padding-bottom: 1px;
+  }
+  .programme-name a:hover { color: var(--amber); }
+  .programme-desc {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--navy-70);
+  }
+  @media (max-width: 640px) {
+    .programmes { grid-template-columns: 1fr; gap: 16px; }
+  }
+
+  /* ---------- Skills ---------- */
+  .skills-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px 60px;
+  }
+  @media (max-width: 820px) { .skills-grid { grid-template-columns: 1fr; gap: 36px; } }
+  .certs {
+    margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--navy-15);
+  }
+  .certs h3 {
+    font-family: var(--sans); font-weight: 500; font-size: 0.8rem;
+    text-transform: uppercase; letter-spacing: 0.22em; color: var(--amber);
+    margin-bottom: 16px;
+  }
+  .skill-block h3 {
+    font-family: var(--sans); font-weight: 500; font-size: var(--step-1);
+    margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--navy-15);
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px 10px; padding: 0; margin: 0; list-style: none; }
+  .chips li {
+    font-size: 0.82rem; padding: 6px 12px;
+    border: 1px solid var(--navy-15); border-radius: 2px;
+    background: var(--cream-2); color: var(--navy);
+  }
+  .chips.ai li { border-color: var(--amber); color: var(--amber); background: transparent; }
+  .skill-note { font-size: 0.88rem; color: var(--navy-70); margin-top: 10px; }
+
+  /* ---------- Languages ---------- */
+  .lang-table {
+    width: 100%; border-collapse: collapse; font-size: 0.95rem;
+  }
+  .lang-table th, .lang-table td {
+    text-align: left; padding: 14px 12px; border-bottom: 1px solid var(--navy-15);
+    vertical-align: top;
+  }
+  .lang-table th {
+    font-family: var(--sans); font-weight: 500; font-size: 0.75rem;
+    text-transform: uppercase; letter-spacing: 0.15em; color: var(--navy-70);
+  }
+  .lang-bar { width: 100%; height: 4px; background: var(--navy-08); position: relative; margin-top: 6px; }
+  .lang-bar::after {
+    content: ""; position: absolute; left: 0; top: 0; height: 100%;
+    width: var(--pct, 0%); background: var(--amber);
+  }
+
+  /* ---------- Portfolio (drone) ---------- */
+  .portfolio-intro {
+    font-family: var(--serif); font-size: var(--step-2); line-height: 1.35;
+    color: var(--navy); max-width: 58ch; margin-bottom: 36px;
+  }
+  .portfolio-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  @media (max-width: 820px) { .portfolio-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .portfolio-grid { grid-template-columns: 1fr; } }
+  .thumb {
+    position: relative; overflow: hidden; aspect-ratio: 4 / 3;
+    background: var(--navy);
+    cursor: zoom-in;
+    display: block;
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .thumb img, .thumb video {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .9s cubic-bezier(.2,.7,.2,1), filter .9s ease;
+    filter: saturate(0.92);
+    display: block;
+  }
+  .thumb::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(28,43,74,0.85) 100%);
+    opacity: 0; transition: opacity .5s ease;
+  }
+  .thumb .caption {
+    position: absolute; left: 18px; right: 18px; bottom: 18px; z-index: 2;
+    color: var(--cream); opacity: 0; transform: translateY(6px);
+    transition: opacity .5s ease, transform .5s ease;
+    font-size: 0.88rem; line-height: 1.4;
+  }
+  .thumb .caption .loc {
+    display: block; font-size: 0.7rem; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--amber); margin-bottom: 4px;
+  }
+  .thumb:hover img, .thumb:hover video { transform: scale(1.04); filter: saturate(1.05); }
+  .thumb:hover::after { opacity: 1; }
+  .thumb:hover .caption { opacity: 1; transform: translateY(0); }
+  .thumb.video-tile::before {
+    content: "▶";
+    position: absolute; top: 14px; right: 16px; z-index: 3;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    color: var(--cream);
+    background: rgba(28,43,74,0.55);
+    padding: 4px 10px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  /* Lightbox */
+  .lightbox {
+    position: fixed; inset: 0;
+    background: rgba(15, 22, 40, 0.96);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    padding: 32px;
+    cursor: zoom-out;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox-media {
+    max-width: min(1600px, 100%);
+    max-height: 100%;
+    object-fit: contain;
+    cursor: default;
+  }
+  .lightbox-close {
+    position: absolute; top: 18px; right: 22px;
+    font-family: var(--sans);
+    font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--cream);
+    background: none; border: 0; padding: 8px 10px;
+    cursor: pointer;
+  }
+  .lightbox-close:hover { color: var(--amber); }
+
+  /* ---------- References ---------- */
+  .refs {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+  }
+  @media (max-width: 820px) { .refs { grid-template-columns: 1fr; } }
+  .ref {
+    padding: 24px; border: 1px solid var(--navy-15); background: var(--cream-2);
+    display: flex; flex-direction: column; gap: 8px;
+    position: relative;
+  }
+  .ref .rank {
+    position: absolute; top: 16px; right: 20px;
+    font-family: var(--serif); font-size: 1.4rem; color: var(--amber);
+    line-height: 1;
+  }
+  .ref h3 { font-family: var(--sans); font-weight: 500; font-size: 1.05rem; line-height: 1.3; padding-right: 40px; }
+  .ref .role { font-size: 0.88rem; color: var(--navy-70); }
+  .ref .note { font-size: 0.82rem; color: var(--navy-70); font-style: italic; }
+  .ref a { font-size: 0.88rem; }
+
+  /* ---------- Organisations ---------- */
+  .orgs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  @media (max-width: 820px) { .orgs { grid-template-columns: 1fr; } }
+  .org-card {
+    padding: 28px; border: 1px solid var(--navy-15);
+    transition: border-color .2s ease, background .2s ease;
+    display: block; color: inherit; text-decoration: none;
+    position: relative;
+  }
+  .org-card:hover { border-color: var(--amber); background: var(--cream-2); }
+  a.org-card::after {
+    content: "↗";
+    position: absolute; top: 20px; right: 22px;
+    font-size: 0.9rem; color: var(--navy-40);
+    transition: color .2s ease, transform .2s ease;
+  }
+  a.org-card:hover::after { color: var(--amber); transform: translate(2px, -2px); }
+  .org-card h3 {
+    font-family: var(--sans); font-weight: 500; font-size: 1.1rem; margin-bottom: 4px;
+  }
+  .org-card .sub {
+    font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em;
+    color: var(--amber); margin-bottom: 10px;
+  }
+  .org-card p { font-size: 0.92rem; color: var(--navy-70); margin: 0; }
+
+  /* ---------- Personal ---------- */
+  .personal-text {
+    font-family: var(--serif); font-size: var(--step-2); line-height: 1.4;
+    max-width: 60ch; margin-bottom: 56px;
+  }
+  .personal-text em { color: var(--amber); font-style: italic; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    padding: 48px 0 36px; border-top: 1px solid var(--navy-15);
+    font-size: 0.8rem; color: var(--navy-70);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+  }
+  footer a { font-size: 0.8rem; }
+
+  /* ---------- Utility ---------- */
+  .mono { font-variant-numeric: tabular-nums; letter-spacing: 0.03em; }
+  .amber { color: var(--amber); }
+  .divider-dot { display: inline-block; width: 3px; height: 3px; background: var(--navy-40); border-radius: 50%; vertical-align: middle; margin: 0 8px 3px; }
+
+  @media print {
+    .nav, .portfolio-grid, .thumb { display: none; }
+    section { padding: 20px 0; page-break-inside: avoid; }
+    a { border: 0; color: var(--navy); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ======================= NAV ======================= -->
+<nav class="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top">Gaétane Sallard</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks" onclick="
+      const n=document.getElementById('navlinks');
+      const o=n.classList.toggle('open');
+      this.setAttribute('aria-expanded', o);
+    ">☰</button>
+    <div class="nav-links" id="navlinks">
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#languages">Languages</a>
+      <a href="#personal">Personal</a>
+      <a href="#references">References</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ======================= HERO ======================= -->
+<header class="wrap hero" id="top">
+  <div class="hero-grid">
+    <aside class="hero-meta">
+      <div class="hero-portrait">
+        <img src="assets/portrait.jpg" alt="Portrait of Gaétane Sallard" />
+      </div>
+      <div class="eyebrow mono">CV / 2026</div>
+      <ul class="meta-list">
+        <li><span class="label">Email</span><a href="mailto:gaetanemagali@icloud.com">gaetanemagali@icloud.com</a></li>
+        <li><span class="label">Phone</span><a href="tel:+4915222141987">+49 152 22141987</a></li>
+        <li><span class="label">Based</span>Bremen, Germany</li>
+        <li><span class="label">Citizenship</span>Swiss &middot; French</li>
+      </ul>
+    </aside>
+    <div class="hero-main">
+      <div class="eyebrow">Sallard &middot; Gaétane Magali</div>
+      <h1>Scientist by training.<br />Coach by calling.<br />Explorer <em class="amber">by instinct.</em></h1>
+      <p class="title">Marine microbiologist <em>/</em> environmental scientist — fascinated by how microbial partnerships make life possible in nutrient-poor oceans. Group fitness manager — powered by movement and by the people I coach. Two fields, one question: how do living systems keep going?</p>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= EDUCATION ======================= -->
+<section id="education">
+  <div class="wrap">
+    <div class="row">
+      <aside class="col-side">
+        <div class="section-label">01 / Education</div>
+      </aside>
+      <div class="col-main">
+        <h2 class="section-title">Where I learned to think.</h2>
+
+        <div class="entry">
+          <div class="period mono">2023 — 2025</div>
+          <div>
+            <h3>MSc, Marine Microbiology (MarMic)</h3>
+            <span class="org"><a href="https://marmic.mpg.de/marmic2/" target="_blank" rel="noopener">International Max Planck Research School — MPI-MM, University of Bremen, AWI, Constructor University Bremen</a></span>
+            <div class="body">Joint research-intensive programme in marine microbiology, spanning prokaryotic and eukaryotic biology, ecology, evolution, and bioinformatics.</div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="period mono">2019 — 2023</div>
+          <div>
+            <h3>BSc, Environmental Sciences</h3>
+            <span class="org"><a href="https://usys.ethz.ch/en/studies/environmental-sciences/bachelor.html" target="_blank" rel="noopener">ETH Zurich &middot; Specialisation in Environmental Biology</a></span>
+            <div class="body">Activities: ASVZ BodyPump, SuperKondi, Karate. Member of UFO — Umwelt- &amp; Forstverein der ETH Zürich.</div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="period mono">2018 — 2019</div>
+          <div>
+            <h3>Matura (A-levels)</h3>
+            <span class="org">Maturitätsschule für Erwachsene, Luzern</span>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="period mono">2014 — 2017</div>
+          <div>
+            <h3>EFZ Businesswoman &middot; Federal Vocational Baccalaureate (Economy)</h3>
+            <span class="org">Wirtschaftsmittelschule Luzern</span>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="period mono">2016</div>
+          <div>
+            <h3>C2 Certificate of Achievement in English</h3>
+            <span class="org">EF International Language Campuses, New York</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= EXPERIENCE ======================= -->
+<section id="experience">
+  <div class="wrap">
+    <div class="row">
+      <aside class="col-side">
+        <div class="section-label">02 / Experience</div>
+      </aside>
+      <div class="col-main">
+        <h2 class="section-title">What I've done.</h2>
+
+        <h3 style="font-family:var(--sans);font-weight:500;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.22em;color:var(--amber);margin-bottom:20px;">— Academic</h3>
+
+        <div class="entry">
+          <div class="period mono">Jul — Sep 2025</div>
+          <div>
+            <h3>Research Technician</h3>
+            <span class="org"><a href="https://www.mpi-bremen.de/en/Department-of-Symbiosis.html" target="_blank" rel="noopener">Max Planck Institute for Marine Microbiology &middot; Department of Symbiosis</a></span>
+            <div class="body">Adapted HCR-FISH laboratory protocols to improve visual output under laser-scanning confocal microscopy for labelled enzymes.</div>
+            <div class="tags">
+              <span class="tag">HCR-FISH</span><span class="tag">Confocal Microscopy</span><span class="tag">Lab Protocol Optimisation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry" id="projects">
+          <div class="period mono">Sep 2024 — Mar 2025</div>
+          <div>
+            <h3>Master Thesis — <em>Team Worm allows <i>O. algarvensis</i> to thrive in nitrogen-limited environments</em></h3>
+            <span class="org"><a href="https://www.mpi-bremen.de/en/Department-of-Symbiosis.html" target="_blank" rel="noopener">MPI-MM &middot; Department of Symbiosis</a> &middot; Supervisors: Dr. Caroline Zeidler, Alba Porta Fidalgo &middot; 1st Reviewer: Prof. Dr. Nicole Dubilier</span>
+            <div class="body">Studied how the gutless oligochaete <i>Olavius algarvensis</i> thrives in nitrogen-poor sediments at Sant'Andrea, Elba — a worm with no digestive system and no nephridia (the organ animals normally use to excrete ammonium), sustained entirely by an obligate symbiosis with at least five bacterial endosymbionts. Found the ammonium transporter Rhp1 upregulated in the trunk segments where the symbionts reside, and localised symbiont glutamine synthetase (GS) within the symbiont layer via HCR-FISH. The co-localisation suggests host-derived ammonium is recycled by the symbionts — effectively replacing the missing nephridia and conserving nitrogen within the partnership. Most prior work on this system focused on carbon transfer; this thesis makes the case for nitrogen as the other half of the story.</div>
+            <div class="tags">
+              <span class="tag">Metagenomics</span><span class="tag">Metatranscriptomics</span><span class="tag">Phylogenetics</span><span class="tag">AlphaFold</span><span class="tag">HMM</span><span class="tag">HCR-FISH</span>
+            </div>
+            <div class="sneak">
+              <div class="sneak-label">Sneak peek — the key finding</div>
+              <blockquote>"A gutless worm with no excretory organ, yet thriving in nitrogen-starved sediment. Its five bacterial partners don't just feed it — they recycle the ammonium it produces, taking over the role of nephridia and closing the nitrogen loop within the symbiosis."</blockquote>
+              <span class="sneak-link">MSc Thesis &middot; MarMic / MPI-MM &middot; 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="period mono">Jun — Aug 2024</div>
+          <div>
+            <h3>Lab Rotation III — <em>Targeting Microbes in the Digital Ecosystem</em></h3>
+            <span class="org">UNESCO IOC Project Office for IODE &middot; UN Ocean Decade &middot; MPI-MM &middot; Supervisor: Dr. Pier Luigi Buttigieg</span>
+            <div class="body">Built a pipeline from scratch to ask a simple question: where does microbial data actually live in the ocean's digital ecosystem? Harvested microbial terms from the SILVA database and Wikipedia (via spaCy natural-language processing), queried the Ocean Data Information System (ODIS) with SPARQL, and mapped the connections between datasets as a directed graph (NetworkX / Gephi) before pinpointing their geographic origins. The results surfaced a societal bias in what gets submitted: plankton studies cluster around eutrophication and fisheries, <i>E. coli</i> data tracks sewage leakage, and the three largest fishing nations — China, Indonesia, India — are barely visible on the map. No universal mandate, no shared vocabulary. Contributed to the specification sheet for the Microbial Essential Ocean Variable under the Global Ocean Observing System (GOOS).</div>
+            <div class="tags">
+              <span class="tag">SPARQL</span><span class="tag">JSON-LD</span><span class="tag">Python</span><span class="tag">spaCy</span><span class="tag">NetworkX</span><span class="tag">Gephi</span><span class="tag">Wikipedia API</span><span class="tag">Parquet</span>
+            </div>
+            <div class="sneak">
+              <div class="sneak-label">Sneak peek — from the poster</div>
+              <blockquote>"There is a societal bias in microbial data submission… we neglect microbial diversity. There are significant gaps in our knowledge regarding the location of microbial data."</blockquote>
+              <a class="sneak-link" href="https://github.com/gaetanemagali/OIH_Rotation_Report/tree/main" target="_blank" rel="noopener">Report &amp; code on GitHub →</a>
+            </div>
+            <div class="poster-preview">
+              <a class="thumb-link" href="assets/LabRotationIII_Poster.pdf" target="_blank" rel="noopener" aria-label="Open the full poster PDF in a new tab">
+                <img src="assets/LabRotationIII_Poster.jpg" alt="Symposium poster — Targeting Microbes in the Digital Ecosystem, Gaétane Sallard, MPI-MM, 2024" loading="lazy" />
+              </a>
+              <div class="poster-caption">
+                <div class="poster-caption-label">Deliverable — Symposium poster</div>
+                <h4><i>Targeting Microbes in the Digital Ecosystem</i></h4>
+                <p>MarMic Rotation III symposium, MPI-MM, 2024. Under UNESCO IOC / Ocean Decade, supervised by Dr. Pier Luigi Buttigieg.</p>
+                <p><a href="assets/LabRotationIII_Poster.pdf" target="_blank" rel="noopener">Open full poster (PDF) →</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="period mono">May — Jun 2024</div>
+          <div>
+            <h3>Lab Rotation II — Immunohistochemistry in Worms</h3>
+            <span class="org"><a href="https://www.mpi-bremen.de/en/Department-of-Symbiosis.html" target="_blank" rel="noopener">MPI-MM &middot; Department of Symbiosis</a></span>
+            <div class="body">Optimised immunohistochemistry methods in western blotting to visualise digestive enzyme Cathepsin B in <i>O. algarvensis</i> and PHAD in <i>C. teleta</i>.</div>
+            <div class="tags">
+              <span class="tag">Western Blotting</span><span class="tag">SDS-PAGE</span><span class="tag">Whole-Mount ISH</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="period mono">Mar — May 2024</div>
+          <div>
+            <h3>Lab Rotation I — <em>Conservancy of Metabolic Pathways across Microbial Genera</em></h3>
+            <span class="org"><a href="https://anvio.org" target="_blank" rel="noopener">Helmholtz Institute for Functional Marine Biodiversity (HIFMB)</a> &middot; Supervisors: Prof. Dr. A. Murat Eren, Dr. Iva Veseli</span>
+            <div class="body">Introduced a universal metric for the conservancy of metabolic pathways across microbial genera, built on top of the Genome Taxonomy Database (GTDB). Most existing tools overlook pathway dynamics at large scale — so the metric computes weighted arithmetic means of genome completeness and pathway annotation quality, and uses identity scores to distinguish between truly absent and merely undetected pathways, moving beyond conventional threshold-based methods. By weighting enzyme presence and functional significance in genomic context, the approach can surface novel microbial capabilities when applied at scale — demonstrated on the genus <i>Forterrea</i> as a case study.</div>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">R</span><span class="tag">GTDB</span><span class="tag">anvi'o</span><span class="tag">Comparative Genomics</span><span class="tag">Pathway Annotation</span><span class="tag">Statistical Modelling</span>
+            </div>
+            <div class="sneak">
+              <div class="sneak-label">Sneak peek — the key finding</div>
+              <blockquote>"Most tools for microbial metabolism can't tell 'truly absent' from 'merely undetected' at scale. A metric that can — weighting genome completeness and pathway annotation quality — surfaces microbial capabilities that threshold-based methods miss."</blockquote>
+              <a class="sneak-link" href="https://zenodo.org/records/13809906" target="_blank" rel="noopener">Read on Zenodo →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="period mono">Nov 2022 — Jun 2023</div>
+          <div>
+            <h3>Research Assistant — Microbial Ecology</h3>
+            <span class="org">Eawag &middot; Department of Microbiology &middot; <a href="https://www.mca-johnson.com" target="_blank" rel="noopener">Dr. David Johnson's group</a></span>
+            <div class="body">Expanded the Bachelor thesis project toward publication. Flow cytometry and continued work on microbial community assembly.</div>
+            <div class="tags"><span class="tag">Flow Cytometry</span><span class="tag">Scientific Writing</span></div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="period mono">Feb — Nov 2022</div>
+          <div>
+            <h3>Bachelor Thesis — <em>N₂O Producers vs. Complete Denitrifiers</em></h3>
+            <span class="org">Eawag &middot; Supervisor: <a href="https://www.mca-johnson.com" target="_blank" rel="noopener">Dr. David Johnson</a></span>
+            <div class="body">Studied why N₂O-producing bacteria persist in nature despite competing with complete denitrifiers — which, on first principles, should outcompete them by gaining extra ATP from reducing N₂O to N₂. The question matters climate-wise: nitrous oxide is a potent greenhouse gas and an ozone-depleting one (Ravishankara et al., 2009). Combining anaerobic microbiology, range-expansion experiments, and confocal image analysis, found that both populations exhibit negative frequency dependence — each grows better when rare — letting N₂O producers persist alongside complete denitrifiers. The mechanism appears spatial: non-random self-organisation emerging as the community expands across a surface (Goldschmidt et al., 2021). Spatial and temporal diversity patterns, not just biochemistry, shape which microbial traits dominate — and which climate-relevant processes we can predict or manipulate.</div>
+            <div class="tags"><span class="tag">Anaerobic Microbiology</span><span class="tag">Range Expansion</span><span class="tag">Spatial Self-Organisation</span><span class="tag">Cross-Feeding</span><span class="tag">Negative Frequency Dependence</span><span class="tag">Confocal Microscopy</span><span class="tag">ImageJ</span></div>
+          </div>
+        </div>
+
+        <h3 style="font-family:var(--sans);font-weight:500;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.22em;color:var(--amber);margin:56px 0 20px;">— Non-Academic</h3>
+
+        <div class="entry">
+          <div class="period mono">Jan 2026 —</div>
+          <div>
+            <h3>Group Fitness Manager &amp; Personal Trainer</h3>
+            <span class="org"><a href="https://www.fitnessfirst.de/clubs/bremen-ueberseestadt?em_cmp=google/yext/gmb-listing&amp;utm_medium=organic&amp;utm_source=gmb-listing&amp;utm_campaign=yext" target="_blank" rel="noopener">Fitness First &middot; Bremen Überseestadt</a></span>
+            <div class="body">Lead the group fitness programme — class design, instructor scheduling, quality control — and act as deputy to the Gym Manager. Build community and events: co-organised the first HYROX Gym event in Germany. Beyond the programme, write individual training plans for members, coach them on the floor, and take care of day-to-day business — member conversations, front desk, administrative duties.</div>
+
+            <div class="testimonial">
+              <div class="testimonial-label">Member feedback</div>
+              <blockquote>"The team (including Gaetane and Irene) once again created a fantastic atmosphere and did a great job organizing everything. There were lots of classes in four rooms, plus a buffet for a quick snack and a nicely done class bingo game. Excellent! Just like the previous specials (Attack meets Combat) for Halloween and Christmas. And guests are also welcome at class release parties and special events. Unfortunately, this has deteriorated significantly at other studios. To top it all off, the team even spontaneously organized a sauna infusion upon request 👍"</blockquote>
+              <div class="testimonial-meta">
+                <span class="testimonial-stars">★★★★☆</span>
+                <span>Jens &middot; Google review</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="period mono">2023 —</div>
+          <div>
+            <h3>Les Mills International Group Fitness Instructor</h3>
+            <span class="org">Self-employed &middot; <a href="https://www.lesmills.com/workouts/all/" target="_blank" rel="noopener">lesmills.com</a></span>
+            <div class="body">Licensed in four Les Mills programmes, teaching classes of 10–50 participants.</div>
+
+            <div class="programmes">
+              <div class="programme">
+                <div class="programme-name"><a href="https://www.lesmills.com/workouts/bodypump/" target="_blank" rel="noopener">BODYPUMP™</a></div>
+                <div class="programme-desc">The original barbell class — light weights, high reps, choreographed to music. Tones the whole body and builds lean muscular endurance.</div>
+              </div>
+              <div class="programme">
+                <div class="programme-name"><a href="https://www.lesmills.com/workouts/bodyattack/" target="_blank" rel="noopener">BODYATTACK™</a></div>
+                <div class="programme-desc">High-energy sports-inspired cardio. Blends athletic movement with strength and stabilisation work to build fitness, coordination and agility.</div>
+              </div>
+              <div class="programme">
+                <div class="programme-name"><a href="https://www.lesmills.com/workouts/les-mills-grit/" target="_blank" rel="noopener">LES MILLS GRIT™ (Level 5)</a></div>
+                <div class="programme-desc">30-minute high-intensity interval training. Combines explosive strength, plyometrics and athletic conditioning — short, hard, and highly effective.</div>
+              </div>
+              <div class="programme">
+                <div class="programme-name"><a href="https://www.lesmills.com/workouts/les-mills-shapes/" target="_blank" rel="noopener">LES MILLS SHAPES™</a></div>
+                <div class="programme-desc">A fusion of Pilates, ballet and power yoga set to music. Strengthens the core, builds control and flexibility through long, flowing lines.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="period mono">2020 — 2022</div>
+          <div>
+            <h3>Swimming Instructor (20%)</h3>
+            <span class="org"><a href="https://scur.ch" target="_blank" rel="noopener">Schwimmclub Urdorf</a></span>
+            <div class="body">Taught children aged 6–16, beginner to advanced. Prepared advanced swimmers for national championships.</div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="period mono">2017 — 2018</div>
+          <div>
+            <h3>HR Internship</h3>
+            <span class="org"><a href="https://www.css.ch/de/privatkunden.html" target="_blank" rel="noopener">CSS Versicherung</a>, Lucerne</span>
+            <div class="body">Event management, internal website management, development course coordination. Bilingual correspondence (FR/DE).</div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="period mono">2015 — 2017</div>
+          <div>
+            <h3>Market Research Staff (20%)</h3>
+            <span class="org">LINK Institute, Lucerne</span>
+            <div class="body">Telephone interviewer — patience and strong verbal communication.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SKILLS ======================= -->
+<section id="skills">
+  <div class="wrap">
+    <div class="row">
+      <aside class="col-side">
+        <div class="section-label">03 / Skills</div>
+      </aside>
+      <div class="col-main">
+        <h2 class="section-title">Toolkit.</h2>
+
+        <div class="skills-grid">
+
+          <div class="skill-block">
+            <h3>Lab Skills</h3>
+            <ul class="chips">
+              <li>Confocal Microscopy</li>
+              <li>HCR-FISH</li>
+              <li>Whole-Mount FISH</li>
+              <li>Immunohistochemistry</li>
+              <li>Western Blotting</li>
+              <li>SDS-PAGE</li>
+              <li>Anaerobic Microbiology</li>
+              <li>Spatial Self-Organisation</li>
+              <li>Flow Cytometry</li>
+              <li>Spatial Expansions</li>
+            </ul>
+            <p class="skill-note">Alongside three lab rotations, MarMic provided six months of training spanning marine prokaryotic and eukaryotic microbiology, physiology, ecology, evolution, molecular biology, and bioinformatics.</p>
+          </div>
+
+          <div class="skill-block">
+            <h3>Programming &amp; Bioinformatics</h3>
+            <ul class="chips">
+              <li>Python</li>
+              <li>R</li>
+              <li>Git</li>
+              <li>Image Analysis (Fiji / ImageJ)</li>
+              <li>GIS</li>
+              <li>Metagenomics</li>
+              <li>Metatranscriptomics</li>
+              <li>SPARQL</li>
+              <li>JSON-LD</li>
+              <li>AlphaFold</li>
+              <li>Phylogenetic Reconstructions</li>
+            </ul>
+          </div>
+
+          <div class="skill-block">
+            <h3>AI &amp; Digital Tools</h3>
+            <ul class="chips ai">
+              <li>Claude — Cowork mode, Artifacts, custom Skills, structured prompting</li>
+              <li>Perplexity — research AI</li>
+              <li>Manus — agentic AI</li>
+              <li>Google Stitch — app prototyping</li>
+              <li>AI-assisted web build (this site)</li>
+              <li>Prompt engineering &amp; iteration</li>
+              <li>Editorial direction of AI output</li>
+              <li>Science-to-lay translation</li>
+            </ul>
+            <p class="skill-note">Comfortable designing systems with conversational, agentic, and research-grade AI — including building custom skills, directing iterative content work, and shipping finished artefacts.</p>
+          </div>
+
+          <div class="skill-block">
+            <h3>Communication &amp; Leadership</h3>
+            <ul class="chips">
+              <li>Leadership</li>
+              <li>Project management</li>
+              <li>Science communication</li>
+              <li>Editorial judgement</li>
+              <li>Narrative &amp; copywriting</li>
+              <li>Trilingual / polyglot</li>
+              <li>Cross-cultural fluency</li>
+              <li>Design thinking</li>
+              <li>Problem solving</li>
+              <li>Networking</li>
+              <li>Feedback culture</li>
+              <li>Improvisation</li>
+              <li>Resilience &amp; drive</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="certs">
+          <h3>Certifications</h3>
+          <ul class="chips">
+            <li>PADI Adventurer Diver — Night, Navigation</li>
+            <li>Les Mills BODYPUMP™</li>
+            <li>Les Mills BODYATTACK™</li>
+            <li>Les Mills GRIT™ (Level 5)</li>
+            <li>Les Mills SHAPES™</li>
+            <li>Cambridge C1 (English)</li>
+            <li>EF C2 Certificate of Achievement (English, New York)</li>
+            <li>DELF C1 (French)</li>
+            <li>EFZ Businesswoman &middot; Federal Vocational Baccalaureate (CH)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ORGS & PROJECTS ======================= -->
+<section id="orgs">
+  <div class="wrap">
+    <div class="row">
+      <aside class="col-side">
+        <div class="section-label">04 / Organisations &amp; Projects</div>
+      </aside>
+      <div class="col-main">
+        <h2 class="section-title">Communities I build&nbsp;in.</h2>
+
+        <div class="orgs">
+          <a class="org-card" href="https://www.femella.org" target="_blank" rel="noopener">
+            <div class="sub">Member &middot; present</div>
+            <h3>femella</h3>
+            <p>Global non-profit community of women building meaningful networks and leadership skills.</p>
+          </a>
+          <article class="org-card">
+            <div class="sub">Student Member &middot; 2022–23</div>
+            <h3>International Society for Microbial Ecology (ISME)</h3>
+            <p>Attended ISME 18, August 2022.</p>
+          </article>
+          <a class="org-card" href="https://sph.ethz.ch/projects/circular-horizon" target="_blank" rel="noopener">
+            <div class="sub">Biomass Sourcing Expert &middot; 2022</div>
+            <h3>Circular Horizon</h3>
+            <p>Student-led ETHZ / UniBE / HSG project on CO₂ fixation via biochar. Co-authored sustainability and sequestration chapters, handled partner acquisition, legal work and fund accession.</p>
+          </a>
+          <a class="org-card" href="https://upltdlab.ethz.ch/upl-iii/" target="_blank" rel="noopener">
+            <div class="sub">Team Lead &middot; 2020–21</div>
+            <h3>Wasserkreislauf — Environmental Education Game</h3>
+            <p>Within "Tackling Environmental Problems" at ETHZ. Led a four-person team to design and deliver an educational game on the water cycle for fourth-grade students. Handled financing, permits, authorship, and partners.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= LANGUAGES ======================= -->
+<section id="languages">
+  <div class="wrap">
+    <div class="row">
+      <aside class="col-side">
+        <div class="section-label">05 / Languages</div>
+      </aside>
+      <div class="col-main">
+        <h2 class="section-title">How I speak.</h2>
+        <table class="lang-table">
+          <thead>
+            <tr><th>Language</th><th>Level</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>French</strong><div class="lang-bar" style="--pct:100%"></div></td>
+              <td>Mother tongue</td>
+              <td>C1 Certificate of French Language</td>
+            </tr>
+            <tr>
+              <td><strong>English</strong><div class="lang-bar" style="--pct:100%"></div></td>
+              <td>Mother tongue (adoptive)</td>
+              <td>C2 (New York); Cambridge C1; daily at ETH &amp; MPI</td>
+            </tr>
+            <tr>
+              <td><strong>German &amp; Swiss German</strong><div class="lang-bar" style="--pct:100%"></div></td>
+              <td>Mother tongue</td>
+              <td>Schooling &amp; apprenticeship in German</td>
+            </tr>
+            <tr>
+              <td><strong>Spanish</strong><div class="lang-bar" style="--pct:35%"></div></td>
+              <td>A2</td>
+              <td>Understands speech &amp; text, still building spoken fluency</td>
+            </tr>
+            <tr>
+              <td><strong>Chinese (Mandarin)</strong><div class="lang-bar" style="--pct:30%"></div></td>
+              <td>A2</td>
+              <td>Beginner class during Master's at MPI Bremen</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PERSONAL ======================= -->
+<section id="personal">
+  <div class="wrap">
+    <div class="row">
+      <aside class="col-side">
+        <div class="section-label">06 / Personal</div>
+      </aside>
+      <div class="col-main">
+        <h2 class="section-title">Off the clock.</h2>
+
+        <p class="personal-text">I am an adventurer at heart. I've travelled solo from Europe to Oceania with little more than a tent — remote landscapes, self-sufficient, curious. Also a PADI Adventurer Diver certified in night and navigation diving — the underwater world pulls in the same way. That drive shows up in how I work: <em>adaptable, resilient, energised by the unknown</em>.</p>
+
+        <h3 style="font-family:var(--sans);font-weight:500;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.2em;color:var(--navy-70);margin-bottom:14px;">— Drone &amp; photography portfolio</h3>
+        <p style="max-width:58ch;color:var(--navy-70);margin-bottom:28px;">When not in the lab, I capture aerial perspectives with my drone and explore outdoor photography with my DSLR. Tap any frame to view it full-size.</p>
+
+        <div class="portfolio-grid">
+          <button type="button" class="thumb" data-full="assets/portfolio/full/aerial-01.jpg">
+            <img src="assets/portfolio/thumbs/aerial-01.jpg" alt="Aerial drone photograph" loading="lazy" />
+            <span class="caption"><span class="loc">Aerial · 01</span>From above.</span>
+          </button>
+          <button type="button" class="thumb" data-full="assets/portfolio/full/aerial-02.jpg">
+            <img src="assets/portfolio/thumbs/aerial-02.jpg" alt="Aerial drone photograph" loading="lazy" />
+            <span class="caption"><span class="loc">Aerial · 02</span>From above.</span>
+          </button>
+          <button type="button" class="thumb" data-full="assets/portfolio/full/aerial-03.jpg">
+            <img src="assets/portfolio/thumbs/aerial-03.jpg" alt="Aerial drone photograph" loading="lazy" />
+            <span class="caption"><span class="loc">Aerial · 03</span>From above.</span>
+          </button>
+          <button type="button" class="thumb video-tile" data-full="assets/portfolio/full/aerial-video.mp4" data-type="video">
+            <img src="assets/portfolio/thumbs/aerial-video.jpg" alt="Drone video — play" loading="lazy" />
+            <span class="caption"><span class="loc">Video · drone</span>Moving footage — tap to play.</span>
+          </button>
+          <button type="button" class="thumb" data-full="assets/portfolio/full/aerial-04.jpg">
+            <img src="assets/portfolio/thumbs/aerial-04.jpg" alt="Aerial drone photograph" loading="lazy" />
+            <span class="caption"><span class="loc">Aerial · 04</span>From above.</span>
+          </button>
+          <button type="button" class="thumb" data-full="assets/portfolio/full/aerial-05.jpg">
+            <img src="assets/portfolio/thumbs/aerial-05.jpg" alt="Aerial drone photograph" loading="lazy" />
+            <span class="caption"><span class="loc">Aerial · 05</span>From above.</span>
+          </button>
+          <button type="button" class="thumb" data-full="assets/portfolio/full/aerial-06.jpg">
+            <img src="assets/portfolio/thumbs/aerial-06.jpg" alt="Aerial drone photograph" loading="lazy" />
+            <span class="caption"><span class="loc">Aerial · 06</span>From above.</span>
+          </button>
+          <button type="button" class="thumb" data-full="assets/portfolio/full/aerial-07.jpg">
+            <img src="assets/portfolio/thumbs/aerial-07.jpg" alt="Aerial drone photograph" loading="lazy" />
+            <span class="caption"><span class="loc">Aerial · 07</span>From above.</span>
+          </button>
+          <button type="button" class="thumb" data-full="assets/portfolio/full/aerial-08.jpg">
+            <img src="assets/portfolio/thumbs/aerial-08.jpg" alt="Aerial drone photograph" loading="lazy" />
+            <span class="caption"><span class="loc">Aerial · 08</span>From above.</span>
+          </button>
+          <button type="button" class="thumb" data-full="assets/portfolio/full/dslr-01.jpg">
+            <img src="assets/portfolio/thumbs/dslr-01.jpg" alt="DSLR photograph" loading="lazy" />
+            <span class="caption"><span class="loc">DSLR · 01</span>Ground-level.</span>
+          </button>
+          <button type="button" class="thumb" data-full="assets/portfolio/full/earth-01.jpg">
+            <img src="assets/portfolio/thumbs/earth-01.jpg" alt="Landscape photograph" loading="lazy" />
+            <span class="caption"><span class="loc">Earth · 01</span>Ground-level.</span>
+          </button>
+          <button type="button" class="thumb" data-full="assets/portfolio/full/earth-02.jpg">
+            <img src="assets/portfolio/thumbs/earth-02.jpg" alt="Landscape photograph" loading="lazy" />
+            <span class="caption"><span class="loc">Earth · 02</span>Ground-level.</span>
+          </button>
+        </div>
+
+        <!-- Lightbox overlay -->
+        <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog">
+          <button type="button" class="lightbox-close" aria-label="Close">Close ✕</button>
+          <div class="lightbox-content"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= REFERENCES ======================= -->
+<section id="references">
+  <div class="wrap">
+    <div class="row">
+      <aside class="col-side">
+        <div class="section-label">07 / References</div>
+      </aside>
+      <div class="col-main">
+        <h2 class="section-title">People who know the work.</h2>
+
+        <div class="refs">
+
+          <article class="ref">
+            <span class="rank">01</span>
+            <h3>Dr. David Johnson</h3>
+            <div class="role">Senior Scientist &amp; Group Leader, <a href="https://www.mca-johnson.com" target="_blank" rel="noopener">Community Assembly Group</a> &middot; Deputy Department Head &middot; Eawag, Dübendorf</div>
+            <div class="note">Supervisor — BSc thesis and subsequent research assistantship.</div>
+            <a href="mailto:david.johnson@eawag.ch">david.johnson@eawag.ch</a>
+          </article>
+
+          <article class="ref">
+            <span class="rank">02</span>
+            <h3>Dr. Iva Veseli</h3>
+            <div class="role">Postdoc, Ecosystem Data Science Group &middot; Helmholtz Institute for Functional Marine Biodiversity (HIFMB)</div>
+            <div class="note">Direct supervisor — Lab Rotation I (metabolic pathway conservation, anvi'o).</div>
+            <a href="mailto:iva.veseli@hifmb.de">iva.veseli@hifmb.de</a>
+          </article>
+
+          <article class="ref">
+            <span class="rank">03</span>
+            <h3>René Vogel</h3>
+            <div class="role">Les Mills International Presenter</div>
+            <div class="note">Reference for group fitness leadership, class quality, and presentation skills.</div>
+            <a href="mailto:rene@fitnessandfinance.de">rene@fitnessandfinance.de</a>
+          </article>
+
+          <article class="ref">
+            <span class="rank">04</span>
+            <h3>Prof. Dr. Nicole Dubilier</h3>
+            <div class="role">Director, Max Planck Institute for Marine Microbiology, Bremen</div>
+            <div class="note">First reviewer — MSc thesis.</div>
+            <a href="mailto:ndubilie@mpi-bremen.de">ndubilie@mpi-bremen.de</a>
+          </article>
+
+          <article class="ref">
+            <span class="rank">05</span>
+            <h3>Dr. Pier Luigi Buttigieg</h3>
+            <div class="role">Senior Data Scientist &amp; Digital Architect &middot; AWI / MPI-MM / IOC Project Office for IODE &amp; UN Ocean Decade</div>
+            <div class="note">Supervisor of Lab Rotation III (ODIS / Ocean Decade data ecosystem).</div>
+            <a href="mailto:pbuttigi@mpi-bremen.de">pbuttigi@mpi-bremen.de</a>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;width:100%;">
+    <div>© 2026 Gaétane Sallard &middot; Bremen, Germany</div>
+    <div><a href="mailto:gaetanemagali@icloud.com">gaetanemagali@icloud.com</a> &middot; <a href="tel:+4915222141987">+49 152 22141987</a></div>
+  </div>
+</footer>
+
+<script>
+  // Close mobile menu on link click
+  document.querySelectorAll('#navlinks a').forEach(a => {
+    a.addEventListener('click', () => {
+      const n = document.getElementById('navlinks');
+      n.classList.remove('open');
+      document.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Lightbox for drone portfolio
+  (function() {
+    const lb = document.getElementById('lightbox');
+    if (!lb) return;
+    const content = lb.querySelector('.lightbox-content');
+    const closeBtn = lb.querySelector('.lightbox-close');
+
+    function open(src, type) {
+      content.innerHTML = '';
+      let el;
+      if (type === 'video') {
+        el = document.createElement('video');
+        el.src = src;
+        el.controls = true;
+        el.autoplay = true;
+        el.playsInline = true;
+        el.className = 'lightbox-media';
+      } else {
+        el = document.createElement('img');
+        el.src = src;
+        el.alt = '';
+        el.className = 'lightbox-media';
+      }
+      el.addEventListener('click', e => e.stopPropagation());
+      content.appendChild(el);
+      lb.classList.add('open');
+      lb.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function close() {
+      lb.classList.remove('open');
+      lb.setAttribute('aria-hidden', 'true');
+      content.innerHTML = '';
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.portfolio-grid .thumb').forEach(t => {
+      t.addEventListener('click', () => {
+        const src = t.getAttribute('data-full');
+        const type = t.getAttribute('data-type');
+        if (src) open(src, type);
+      });
+    });
+    closeBtn.addEventListener('click', close);
+    lb.addEventListener('click', close);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  })();
+</script>
+
+</body>
+</html>
